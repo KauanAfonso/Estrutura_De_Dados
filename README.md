@@ -1,2 +1,2 @@
 # Estrutura_De_Dados
-Algoritmos de busca 
+Principais algoritimos de busca com Javascript
