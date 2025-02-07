@@ -11,12 +11,10 @@ const bublle_sort = (lista) =>{
             }
             
         }
-        
-        console.log(lista)
-        return lista
+
     }
+
+    return lista
 }
 
-
-
-console.log(bublle_sort([8,10,9,5,6,1,88,94]))
+console.log(bublle_sort([8,10,9,5,6,1,88,94,2]))
