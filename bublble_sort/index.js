@@ -1,18 +1,23 @@
 const bublle_sort = (lista) =>{
     let num = 0
-    for (let i = 0; i < lista.length; i++) {
+    let trocou 
+    let tamanho_lista = lista.length
+do{
+     trocou = false
+       for (let i = 0; i < tamanho_lista - 1; i++) {
 
-        for (let j = i + 1; j < lista.length; j++) {
-
-            if(lista[i] > lista[j]){
+            if(lista[i] > lista[i + 1]){
                 num = lista[i]
-                lista[i]= lista[j]
-                lista[j] = num
+                lista[i]= lista[i + 1]
+                lista[i+1] = num
+
+                trocou  = true
             }
-            
         }
 
-    }
+        tamanho_lista-=1
+
+}while(trocou)
 
     return lista
 }
