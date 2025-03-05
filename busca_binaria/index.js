@@ -1,16 +1,35 @@
-function busca_binaria(lista){
-    numero_minimo = lista.reduce((menor_numero, elemento_atual)=>{
-        return menor_numero < elemento_atual ? menor_numero : elemento_atual
-    })
+function busca_binaria(lista, valor){
 
-    numero_maior = lista.reduce((maior_numero, elemento_atual)=>{return maior_numero > elemento_atual ? maior_numero : elemento_atual },0)
+  const lado_esquerda = 0
+  const lado_direita = lista.length - 1
 
-    console.log(numero_minimo)
-    console.log(numero_maior)
+  while(lado_direita >= lado_esquerda){
+
+    const meio_lista = (lado_direita + lado_esquerda) / 2
+
+    if(lista[meio_lista] == valor){
+        return meio
+    }
+    else if(lista[meio_lista] < valor){
+        lado_direita = meio_lista - 1
+    }
+    else if(lista[meio_lista] > valor){
+        lado_esquerda = meio_lista + 1
+    }
+  }
+
+  return -1
+
 }
 
 
 
 
 
-busca_binaria([1,20,5,0,18,6,18,-5])
+const resultado = busca_binaria([1,20,44,55,32,78,82,83,91,92,94,100], 20)
+
+if(resultado == -1){
+    console.log("Valor não encontrado")
+}else{
+    console.log("valor encontrado")
+}
