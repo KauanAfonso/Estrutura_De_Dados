@@ -1,8 +1,8 @@
-const busca_linear =  (elemento, lista) =>{
+const busca_linear =  (numero, lista) =>{
 
     for (let i = 0; i < lista.length; i++) {
-        element = lista[i]
-        if(element == elemento){
+        elemento = lista[i]
+        if(elemento == numero){
             return "Elemento encontrado";
         }
     }

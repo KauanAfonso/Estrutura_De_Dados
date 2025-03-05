@@ -1,17 +1,17 @@
 const insertion_sort = (lista)=>{
 
     for (let i = 1; i < lista.length; i++) {
-        const elemnto_atual = lista[i];
-        let elemnto_anterior = i - 1
+        const elmento_atual = lista[i];
+        let elmento_anterior = i - 1
 
   
-        while(lista[elemnto_anterior] > elemnto_atual && elemnto_anterior>=0){
+        while(lista[elmento_anterior] > elmento_atual && elmento_anterior>=0){
                 
-            lista[elemnto_anterior + 1] =lista[elemnto_anterior]
-            elemnto_anterior--
+            lista[elmento_anterior + 1] =lista[elmento_anterior]
+            elmento_anterior--
         }
         
-        lista[elemnto_anterior + 1] = elemnto_atual
+        lista[elmento_anterior + 1] = elmento_atual
     }
 
     return lista
